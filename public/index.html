@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Básico: Título y Descripción -->
-    <title>El Sistema del 1% para Vencer la Procrastinación - ideasreales.com</title>
-    <meta name="description" content="Descubre cómo vencer la procrastinación y el análisis por parálisis con el sistema del 1%. Una guía práctica para lograr tus metas a través de micro-triunfos diarios.">
-    <meta name="keywords" content="procrastinación, motivación, hábitos, desarrollo personal, análisis por parálisis, micro-triunfos, elon musk, marco aurelio">
+
+    <!-- SEO Basico: Titulo y Descripcion -->
+    <title>El Sistema del 1% para Vencer la Procrastinacion - ideasreales.com</title>
+    <meta name="description" content="Descubre como vencer la procrastinacion y el analisis por paralisis con el sistema del 1%. Una guia practica para lograr tus metas a traves de micro-triunfos diarios.">
+    <meta name="keywords" content="procrastinacion, motivacion, habitos, desarrollo personal, analisis por paralisis, micro-triunfos, elon musk, marco aurelio">
     <link rel="canonical" href="https://www.ideasreales.com/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.ideasreales.com/">
-    <meta property="og:title" content="El Sistema del 1% para Vencer la Procrastinación - ideasreales.com">
-    <meta property="og:description" content="Dejá de buscar motivación. El secreto para avanzar no está en las grandes metas, sino en los micro-triunfos que ignorás cada día.">
-    <meta property="og:image" content="https://www.ideasreales.com/images/elon-musk-cohete.jpg"> <!-- Nota: Usa la URL completa de tu imagen cuando el sitio esté online -->
+    <meta property="og:title" content="El Sistema del 1% para Vencer la Procrastinacion - ideasreales.com">
+    <meta property="og:description" content="Deja de buscar motivacion. El secreto para avanzar no esta en las grandes metas, sino en los micro-triunfos que ignoras cada dia.">
+    <meta property="og:image" content="https://www.ideasreales.com/images/elon-musk-cohete.jpg">
 
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.ideasreales.com/">
-    <meta property="twitter:title" content="El Sistema del 1% para Vencer la Procrastinación - ideasreales.com">
-    <meta property="twitter:description" content="Dejá de buscar motivación. El secreto para avanzar no está en las grandes metas, sino en los micro-triunfos que ignorás cada día.">
-    <meta property="twitter:image" content="https://www.ideasreales.com/images/elon-musk-cohete.jpg"> <!-- Nota: Usa la URL completa de tu imagen cuando el sitio esté online -->
+    <meta property="twitter:title" content="El Sistema del 1% para Vencer la Procrastinacion - ideasreales.com">
+    <meta property="twitter:description" content="Deja de buscar motivacion. El secreto para avanzar no esta en las grandes metas, sino en los micro-triunfos que ignoras cada dia.">
+    <meta property="twitter:image" content="https://www.ideasreales.com/images/elon-musk-cohete.jpg">
 
-    <!-- Ícono para la pestaña del navegador (Favicon) -->
+    <!-- Icono para la pestana del navegador (Favicon) -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e67e22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z'%3E%3C/path%3E%3Cpath d='M12 2v2'%3E%3C/path%3E%3Cpath d='M6 8v0'%3E%3C/path%3E%3Cpath d='M18 8v0'%3E%3C/path%3E%3C/svg%3E">
 
     <!-- Google Analytics -->
@@ -39,7 +39,7 @@
 
     <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fuente Inter -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
@@ -90,8 +90,41 @@
             margin-top: 3rem;
             padding-top: 2rem;
         }
+        /* Sidebar */
+        .notes-sidebar {
+            position: fixed;
+            left: 0;
+            top: 4rem;
+            width: 14rem;
+            height: calc(100vh - 4rem);
+            overflow-y: auto;
+            border-right: 1px solid #374151;
+            background: rgba(17, 24, 39, 0.95);
+            padding: 1.5rem 1rem;
+            z-index: 40;
+        }
+        .notes-sidebar a.active {
+            color: #f59e0b;
+            font-weight: 600;
+            background: rgba(245, 158, 11, 0.1);
+        }
+        /* Interstitial box */
+        .note-suggest {
+            margin: 2.5rem 0;
+            padding: 1.25rem 1.5rem;
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 0.75rem;
+        }
+        .note-suggest:hover {
+            border-color: rgba(245, 158, 11, 0.5);
+            background: rgba(245, 158, 11, 0.12);
+        }
+        @media (max-width: 1023px) {
+            .notes-sidebar { display: none; }
+        }
     </style>
-    
+
     <!-- Schema.org para Google (Datos Estructurados) -->
     <script type="application/ld+json">
     {
@@ -101,19 +134,19 @@
         "@type": "WebPage",
         "@id": "https://www.ideasreales.com/"
       },
-      "headline": "Tu cerebro te miente: El sistema del 1% para destruir la procrastinación.",
-      "description": "Dejá de buscar motivación. El secreto para avanzar no está en las grandes metas, sino en los micro-triunfos que ignorás cada día.",
-      "image": "https://www.ideasreales.com/images/elon-musk-cohete.jpg",  
+      "headline": "Tu cerebro te miente: El sistema del 1% para destruir la procrastinacion.",
+      "description": "Deja de buscar motivacion. El secreto para avanzar no esta en las grandes metas, sino en los micro-triunfos que ignoras cada dia.",
+      "image": "https://www.ideasreales.com/images/elon-musk-cohete.jpg",
       "author": {
         "@type": "Person",
         "name": "Marcelo"
-      },  
+      },
       "publisher": {
         "@type": "Organization",
         "name": "IdeasReales",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.ideasreales.com/images/logo.png" 
+          "url": "https://www.ideasreales.com/images/logo.png"
         }
       },
       "datePublished": "2025-07-14",
@@ -128,21 +161,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="flex-shrink-0 text-white font-bold text-xl flex items-center">
+                    <a href="/" class="flex-shrink-0 text-white font-bold text-xl flex items-center">
                         <svg class="h-6 w-6 text-amber-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path><path d="M12 2v2"></path><path d="M6 8v0"></path><path d="M18 8v0"></path></svg>
                         IdeasReales
                     </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#" class="text-gray-300 bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                        <a href="/" class="text-gray-300 bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tienda</a>
                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
                     <button id="mobile-menu-button" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
-                        <span class="sr-only">Abrir menú</span>
+                        <span class="sr-only">Abrir menu</span>
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -152,111 +185,150 @@
         </div>
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="text-gray-300 bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="/" class="text-gray-300 bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
                 <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tienda</a>
                 <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            </div>
+            <div class="border-t border-gray-700 px-2 pt-2 pb-3">
+                <p class="px-3 py-1 text-xs font-semibold text-amber-500 uppercase tracking-wide">Notas</p>
+                <a href="/" class="text-white font-semibold block px-3 py-2 rounded-md text-sm bg-gray-700">El sistema del 1%</a>
+                <a href="/se-hace-camino-al-andar" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm">Se hace camino al andar</a>
+                <a href="/las-oficinas-vacias-y-el-bambu" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm">Las oficinas vacias y el bambu</a>
             </div>
         </div>
     </nav>
 
+    <!-- Sidebar (desktop) -->
+    <aside class="notes-sidebar hidden lg:block">
+        <h3 class="text-xs font-semibold text-amber-500 uppercase tracking-widest mb-4">Notas</h3>
+        <nav class="space-y-1">
+            <a href="/" class="block text-sm text-gray-400 hover:text-white px-3 py-2 rounded-lg transition-colors active">El sistema del 1%</a>
+            <a href="/se-hace-camino-al-andar" class="block text-sm text-gray-400 hover:text-white px-3 py-2 rounded-lg transition-colors">Se hace camino al andar</a>
+            <a href="/las-oficinas-vacias-y-el-bambu" class="block text-sm text-gray-400 hover:text-white px-3 py-2 rounded-lg transition-colors">Las oficinas vacias y el bambu</a>
+        </nav>
+    </aside>
+
     <!-- Contenedor principal del Blog -->
+    <div class="lg:ml-56">
     <div id="blog-container" class="max-w-4xl mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
 
         <!-- Imagen de Cabecera -->
         <div class="w-full h-96 rounded-lg overflow-hidden mb-8">
-            <img src="images/elon-musk-cohete.jpg" alt="Elon Musk con el lanzamiento de un cohete de fondo, simbolizando la acción y la superación de obstáculos." class="w-full h-full object-cover">
+            <img src="images/elon-musk-cohete.jpg" alt="Elon Musk con el lanzamiento de un cohete de fondo, simbolizando la accion y la superacion de obstaculos." class="w-full h-full object-cover">
         </div>
 
-        <!-- Título y Metadatos -->
+        <!-- Titulo y Metadatos -->
         <header class="text-center mb-12">
             <p class="text-base font-semibold text-amber-500 tracking-wide uppercase">El Camino del Guerrero</p>
             <h1 class="mt-2 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                Tu cerebro te miente: El sistema del 1% para destruir la procrastinación.
+                Tu cerebro te miente: El sistema del 1% para destruir la procrastinacion.
             </h1>
             <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-400">
-                Dejá de buscar motivación. El secreto para avanzar no está en las grandes metas, sino en los <strong>micro-triunfos</strong> que ignorás cada día.
+                Deja de buscar motivacion. El secreto para avanzar no esta en las grandes metas, sino en los <strong>micro-triunfos</strong> que ignoras cada dia.
             </p>
         </header>
 
-        <!-- Contenido del Artículo -->
+        <!-- Contenido del Articulo -->
         <article class="prose prose-lg prose-invert mx-auto blog-content">
-            <p>Tenés la lista. Pintar la pared del living. Sellar esa maldita tapa de luz. Retomar el gimnasio. Vaciar el placard del galpón. Y por supuesto, ese gran proyecto que te quita el sueño. La lista es enorme, y la sentís como una montaña imposible de escalar. Cada día que pasa, la montaña crece, y tu energía se encoge.</p>
-            
-            <p id="paralisis">¿Te suena familiar? Es la trampa perfecta de la mente moderna: el <strong>"análisis por parálisis"</strong>. Pensamos tanto en el "todo" que no hacemos "nada".</p>
-            
-            <blockquote>"Donde te centrás, se expande."</blockquote>
-            
-            <p id="fisica-mental">Esta no es una frase de autoayuda barata. Es una ley de la <strong>física mental</strong>. Tu cerebro está programado por defecto para centrarse en lo que falta, en la lista interminable, en la distancia hasta la cima de la montaña. Es un mecanismo de supervivencia que hoy se ha convertido en una forma de <strong>autosabotaje</strong>.</p>
-            
-            <p>Si tu foco está en "todo lo que me falta por hacer", tu realidad se expandirá en una sensación de agobio y fracaso. Pero, ¿y si hackeamos el sistema? ¿Y si obligamos a nuestro cerebro a centrarse en lo que SÍ hicimos?</p>
+            <p>Tenes la lista. Pintar la pared del living. Sellar esa maldita tapa de luz. Retomar el gimnasio. Vaciar el placard del galpon. Y por supuesto, ese gran proyecto que te quita el sueno. La lista es enorme, y la sentis como una <strong>montana imposible</strong> de escalar. Cada dia que pasa, la montana crece, y tu energia se encoge.</p>
+
+            <p id="paralisis">&iquest;Te suena familiar? Es la trampa perfecta de la mente moderna: el <strong>"analisis por paralisis"</strong>. Pensamos tanto en el "todo" que no hacemos "nada".</p>
+
+            <blockquote>"Donde te centras, se expande."</blockquote>
+
+            <p id="fisica-mental">Esta no es una frase de autoayuda barata. Es una ley de la <strong>fisica mental</strong>. Tu cerebro esta programado por defecto para centrarse en lo que falta, en la lista interminable, en la distancia hasta la cima de la montana. Es un mecanismo de <strong>supervivencia</strong> que hoy se ha convertido en una forma de <strong>autosabotaje</strong>.</p>
+
+            <p>Si tu foco esta en "todo lo que me falta por hacer", tu realidad se expandira en una sensacion de <strong>agobio</strong> y <strong>fracaso</strong>. Pero, &iquest;y si hackeamos el sistema? &iquest;Y si obligamos a nuestro cerebro a centrarse en lo que SI hicimos?</p>
+
+            <!-- Interstitial -->
+            <a href="/las-oficinas-vacias-y-el-bambu" class="note-suggest block no-underline transition-all duration-200" style="text-decoration:none;">
+                <p class="text-xs font-semibold text-amber-500 uppercase tracking-wide mb-1" style="margin-bottom:0.25rem;">Nueva nota</p>
+                <p class="text-white font-bold text-base" style="margin-bottom:0.25rem;">Las oficinas vacias y el bambu &rarr;</p>
+                <p class="text-gray-400 text-sm" style="margin-bottom:0;">Sobre la fragilidad de la vida, la historia del bambu japones, y por que no quiero pasar mis dias en una oficina.</p>
+            </a>
 
             <h2 id="diario-victorias">El Arma Secreta: El Diario de Victorias</h2>
 
             <p>
-                <img src="images/marco.jpg" alt="Estatua del emperador y filósofo estoico Marco Aurelio, autor de Meditaciones." class="float-left w-1/3 rounded-lg mr-6 mb-4">
-                Esta es la herramienta más simple y potente que vas a encontrar. No requiere apps, ni suscripciones, ni gurús. Solo una libreta y 3 minutos antes de dormir. Como las "Meditaciones" de Marco Aurelio, pero para tus batallas diarias.
+                <img src="images/marco.jpg" alt="Estatua del emperador y filosofo estoico Marco Aurelio, autor de Meditaciones." class="float-left w-1/3 rounded-lg mr-6 mb-4">
+                Esta es la herramienta mas simple y potente que vas a encontrar. No requiere apps, ni suscripciones, ni gurus. Solo una libreta y 3 minutos antes de dormir. Como las "Meditaciones" de <strong>Marco Aurelio</strong>, pero para tus batallas diarias.
             </p>
 
-            <h3>Cómo funciona:</h3>
-            <p id="micro-triunfos">Cada noche, sin excusas, anotá 3 <strong>micro-triunfos</strong> del día. La clave está en la palabra "micro". No buscamos hazañas épicas. Buscamos evidencia.</p>
-            
+            <h3>Como funciona:</h3>
+            <p id="micro-triunfos">Cada noche, sin excusas, anota 3 <strong>micro-triunfos</strong> del dia. La clave esta en la palabra "micro". No buscamos hazanas epicas. Buscamos <strong>evidencia</strong>.</p>
+
             <ul>
-                <li>¿Retomaste el gimnasio e hiciste 15 minutos de bici? <strong>Es una victoria.</strong> Anotala.</li>
-                <li>¿Pintaste esa pared que odiabas? <strong>Es una victoria.</strong> Anotala.</li>
-                <li>¿Finalmente sellaste esa tapa de luz? <strong>Es una victoria.</strong> Anotala.</li>
-                <li>¿Leíste 5 páginas de un libro? <strong>Es una victoria.</strong> Anotala.</li>
+                <li>&iquest;Retomaste el gimnasio e hiciste 15 minutos de bici? <strong>Es una victoria.</strong> Anotala.</li>
+                <li>&iquest;Pintaste esa pared que odiabas? <strong>Es una victoria.</strong> Anotala.</li>
+                <li>&iquest;Finalmente sellaste esa tapa de luz? <strong>Es una victoria.</strong> Anotala.</li>
+                <li>&iquest;Leiste 5 paginas de un libro? <strong>Es una victoria.</strong> Anotala.</li>
             </ul>
 
-            <p>Al principio te va a parecer una tontería. Pero después de una semana, tendrás una lista de 21 victorias. En un mes, más de 90. Estás construyendo un arsenal de pruebas irrefutables de que SÍ estás avanzando. Le estás dando a tu cerebro nueva información, un nuevo foco. Y donde te centrás, se expande.</p>
+            <p>Al principio te va a parecer una tonteria. Pero despues de una semana, tendras una lista de 21 victorias. En un mes, mas de 90. Estas construyendo un <strong>arsenal de pruebas irrefutables</strong> de que SI estas avanzando. Le estas dando a tu cerebro nueva informacion, un nuevo foco. Y donde te centras, se expande.</p>
+
+            <!-- Interstitial -->
+            <a href="/se-hace-camino-al-andar" class="note-suggest block no-underline transition-all duration-200" style="text-decoration:none;">
+                <p class="text-xs font-semibold text-amber-500 uppercase tracking-wide mb-1" style="margin-bottom:0.25rem;">Te puede interesar</p>
+                <p class="text-white font-bold text-base" style="margin-bottom:0.25rem;">Se hace camino al andar &rarr;</p>
+                <p class="text-gray-400 text-sm" style="margin-bottom:0;">Como en una tarde arme un panel web para controlar una IA desde el celular, sin saber casi nada de servidores.</p>
+            </a>
 
             <h2 id="templo-guerrero">Del Diario a tu Entorno: El Templo del Guerrero</h2>
 
-            <p>Esta filosofía no se queda en el papel. Se extiende a tu entorno. Tu casa no es solo una casa; es tu <strong>campo de entrenamiento</strong>, tu santuario. Cada vez que ordenás, que sacás cosas viejas, que vaciás ese placard, no estás haciendo una tarea doméstica. Estás despejando tu mente. Estás creando espacio físico para que las nuevas ideas puedan respirar.</p>
-            
-            <p id="motivacion">Dejá de esperar el gran golpe de <strong>motivación</strong>. No va a llegar. La motivación no es la causa de la acción, es la consecuencia. Se alimenta de pequeños logros diarios.</p>
-            
-            <p>Empezá esta noche. Agarrá una libreta y encontrá tus 3 victorias de hoy. Por más pequeñas que sean. Ese es el primer paso. El único que importa.</p>
+            <p>Esta filosofia no se queda en el papel. Se extiende a tu <strong>entorno</strong>. Tu casa no es solo una casa; es tu <strong>campo de entrenamiento</strong>, tu santuario. Cada vez que ordenas, que sacas cosas viejas, que vacias ese placard, no estas haciendo una tarea domestica. Estas despejando tu mente. Estas creando <strong>espacio fisico</strong> para que las nuevas ideas puedan respirar.</p>
+
+            <p id="motivacion">Deja de esperar el gran golpe de <strong>motivacion</strong>. No va a llegar. La motivacion no es la causa de la accion, es la <strong>consecuencia</strong>. Se alimenta de pequenos logros diarios.</p>
+
+            <p>Empeza esta noche. Agarra una libreta y encontra tus 3 victorias de hoy. Por mas pequenas que sean. Ese es el <strong>primer paso</strong>. El unico que importa.</p>
 
         </article>
-        
-        <!-- Sección de Palabras Clave -->
+
+        <!-- Seccion de Palabras Clave -->
         <section class="keyword-section">
             <h3 class="text-xl font-semibold text-white mb-4">Palabras Clave:</h3>
             <div class="flex flex-wrap gap-x-4 gap-y-2">
-                <a href="#paralisis" class="text-amber-400 hover:text-amber-300 hover:underline">Análisis por Parálisis</a>
-                <a href="#fisica-mental" class="text-amber-400 hover:text-amber-300 hover:underline">Física Mental</a>
-                <a href="#diario-victorias" class="text-amber-400 hover:text-amber-300 hover:underline">Diario de Victorias</a>
-                <a href="#micro-triunfos" class="text-amber-400 hover:text-amber-300 hover:underline">Micro-Triunfos</a>
-                <a href="#templo-guerrero" class="text-amber-400 hover:text-amber-300 hover:underline">Templo del Guerrero</a>
-                <a href="#motivacion" class="text-amber-400 hover:text-amber-300 hover:underline">Motivación</a>
+                <a href="#paralisis" class="text-amber-400 hover:text-amber-300 hover:underline"><strong>Analisis por Paralisis</strong></a>
+                <a href="#fisica-mental" class="text-amber-400 hover:text-amber-300 hover:underline"><strong>Fisica Mental</strong></a>
+                <a href="#diario-victorias" class="text-amber-400 hover:text-amber-300 hover:underline"><strong>Diario de Victorias</strong></a>
+                <a href="#micro-triunfos" class="text-amber-400 hover:text-amber-300 hover:underline"><strong>Micro-Triunfos</strong></a>
+                <a href="#templo-guerrero" class="text-amber-400 hover:text-amber-300 hover:underline"><strong>Templo del Guerrero</strong></a>
+                <a href="#motivacion" class="text-amber-400 hover:text-amber-300 hover:underline"><strong>Motivacion</strong></a>
             </div>
         </section>
 
         <!-- Otras notas -->
         <section class="keyword-section">
             <h3 class="text-xl font-semibold text-white mb-6">Otras notas</h3>
-            <a href="/se-hace-camino-al-andar" class="block bg-gray-800/50 border border-gray-700 rounded-lg p-6 hover:border-amber-500/50 hover:bg-gray-800 transition-all duration-200">
-                <p class="text-xs font-semibold text-amber-500 tracking-wide uppercase mb-2">Aprender Haciendo</p>
-                <h4 class="text-lg font-bold text-white mb-2">Se hace camino al andar</h4>
-                <p class="text-gray-400 text-sm">En una tarde armé un panel web para controlar una IA de programación desde el celular, sin saber casi nada de servidores. No hace falta saber todo para arrancar.</p>
-            </a>
+            <div class="space-y-4">
+                <a href="/las-oficinas-vacias-y-el-bambu" class="block bg-gray-800/50 border border-gray-700 rounded-lg p-6 hover:border-amber-500/50 hover:bg-gray-800 transition-all duration-200">
+                    <p class="text-xs font-semibold text-amber-500 tracking-wide uppercase mb-2">Reflexiones</p>
+                    <h4 class="text-lg font-bold text-white mb-2">Las oficinas vacias y el bambu</h4>
+                    <p class="text-gray-400 text-sm">Sobre la fragilidad de la vida, la historia del bambu japones, y por que no quiero pasar mis dias en una oficina.</p>
+                </a>
+                <a href="/se-hace-camino-al-andar" class="block bg-gray-800/50 border border-gray-700 rounded-lg p-6 hover:border-amber-500/50 hover:bg-gray-800 transition-all duration-200">
+                    <p class="text-xs font-semibold text-amber-500 tracking-wide uppercase mb-2">Aprender Haciendo</p>
+                    <h4 class="text-lg font-bold text-white mb-2">Se hace camino al andar</h4>
+                    <p class="text-gray-400 text-sm">En una tarde arme un panel web para controlar una IA de programacion desde el celular, sin saber casi nada de servidores.</p>
+                </a>
+            </div>
         </section>
 
-        <!-- Pie de página del artículo -->
+        <!-- Pie de pagina del articulo -->
         <footer class="mt-16 text-center">
              <div class="flex justify-center items-center text-gray-400">
-                <p>&copy; 2025 ideasreales.com</p>
+                <p>&copy; 2026 ideasreales.com</p>
                 <svg class="w-5 h-5 mx-2 text-amber-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path><path d="M12 2v2"></path><path d="M6 8v0"></path><path d="M18 8v0"></path></svg>
-                <p>La victoria se forja cada día.</p>
+                <p>La victoria se forja cada dia.</p>
             </div>
         </footer>
     </div>
+    </div>
 
     <script>
-        // Lógica para el menú móvil
+        // Logica para el menu movil
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
