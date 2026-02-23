@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Lanzamientos - ideasreales.com</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --color-primario: #e67e22; /* Naranja energético */
+            --color-fondo: #1a1a1a;
+            --color-tarjeta: #2c2c2c;
+            --color-texto: #f0f0f0;
+            --color-texto-secundario: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--color-tarjeta);
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--color-primario);
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: var(--color-texto-secundario);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        /* --- CORRECCIÓN DE LA CUADRÍCULA --- */
+        .lanzamientos-grid {
+            display: flex; /* Usamos Flexbox */
+            flex-wrap: wrap; /* Permitimos que las tarjetas pasen a la siguiente línea */
+            justify-content: center; /* Centramos las tarjetas */
+            gap: 40px; /* Espacio entre tarjetas */
+            padding: 60px 0;
+        }
+
+        .tarjeta-lanzamiento {
+            background-color: var(--color-tarjeta);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            width: 100%; /* Ancho base */
+            max-width: 350px; /* Ancho máximo para cada tarjeta */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-lanzamiento:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(230, 126, 34, 0.2);
+        }
+
+        .tarjeta-imagen {
+            height: 400px;
+            background-color: #444;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tarjeta-contenido {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tarjeta-contenido h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            color: var(--color-texto);
+        }
+
+        .tarjeta-contenido .descripcion {
+            color: var(--color-texto-secundario);
+            flex-grow: 1;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 20px 0;
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .countdown-bloque {
+            font-size: 0.8em;
+            color: var(--color-texto-secundario);
+        }
+
+        .countdown-bloque span {
+            display: block;
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--color-texto);
+        }
+
+        .boton-notificar {
+            display: block;
+            width: 100%;
+            background-color: var(--color-primario);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .boton-notificar:hover {
+            background-color: #d35400;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--color-tarjeta);
+            color: var(--color-texto-secundario);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>La Forja está Encendida</h1>
+            <p>Nuevas herramientas, estrategias y filosofías están siendo creadas para tu arsenal. La cuenta regresiva ha comenzado. Prepárate para el siguiente nivel.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="lanzamientos-grid">
+            
+            <article class="tarjeta-lanzamiento">
+                <div class="tarjeta-imagen" style="background-image: url('https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="tarjeta-contenido">
+                    <h2>El Hábito del Guerrero</h2>
+                    <p class="descripcion">Un método práctico para forjar la disciplina, la constancia y los hábitos atómicos que separan a los que sueñan de los que hacen.</p>
+                    <div class="countdown" id="countdown1"></div>
+                    <button class="boton-notificar">NOTIFICARME</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-lanzamiento">
+                <div class="tarjeta-imagen" style="background-image: url('https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="tarjeta-contenido">
+                    <h2>Marketing sin Chamuyo</h2>
+                    <p class="descripcion">Aprende a vender tu trabajo de forma auténtica. Cómo aplicar las estrategias de Pareto y Kiyosaki para que tu mensaje llegue a quien tiene que llegar.</p>
+                    <div class="countdown" id="countdown2"></div>
+                    <button class="boton-notificar">NOTIFICARME</button>
+                </div>
+            </article>
+
+            <article class="tarjeta-lanzamiento">
+                <div class="tarjeta-imagen" style="background-image: url('https://images.unsplash.com/photo-1588666309990-d68f180f1e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="tarjeta-contenido">
+                    <h2>El Arte de Empezar</h2>
+                    <p class="descripcion">Supera la inercia y el análisis por parálisis. Descubre estrategias prácticas para dar ese primer paso crucial hacia tus metas.</p>
+                     <div class="countdown" id="countdown3"></div>
+                    <button class="boton-notificar">NOTIFICARME</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 ideasreales.com - La victoria se forja cada día.</p>
+    </footer>
+
+    <script>
+        // --- CONFIGURACIÓN DE LOS CONTADORES ---
+        // Formato de fecha: AÑO, MES (0-11), DÍA, HORA, MINUTO, SEGUNDO
+        const lanzamientos = [
+            { id: 'countdown1', fecha: new Date(2025, 8, 15, 10, 0, 0) }, // 15 de Septiembre de 2025
+            { id: 'countdown2', fecha: new Date(2025, 10, 1, 10, 0, 0) },  // 1 de Noviembre de 2025
+            { id: 'countdown3', fecha: new Date(2025, 11, 20, 10, 0, 0) }  // 20 de Diciembre de 2025
+        ];
+
+        function iniciarContadores() {
+            const intervalo = setInterval(() => {
+                lanzamientos.forEach(lanzamiento => {
+                    actualizarContador(lanzamiento.id, lanzamiento.fecha);
+                });
+            }, 1000);
+        }
+
+        function actualizarContador(elementId, fechaFinal) {
+            const ahora = new Date().getTime();
+            const distancia = fechaFinal - ahora;
+
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            const elemento = document.getElementById(elementId);
+            if (distancia < 0) {
+                elemento.innerHTML = "<p style='font-size:1.5em; color:var(--color-primario);'>¡YA DISPONIBLE!</p>";
+                return;
+            }
+            
+            elemento.innerHTML = `
+                <div class="countdown-bloque"><span>${dias}</span>Días</div>
+                <div class="countdown-bloque"><span>${horas}</span>Horas</div>
+                <div class="countdown-bloque"><span>${minutos}</span>Min</div>
+                <div class="countdown-bloque"><span>${segundos}</span>Seg</div>
+            `;
+        }
+        
+        // Inicia todo cuando la página carga
+        window.onload = iniciarContadores;
+    </script>
+
+</body>
+</html>
