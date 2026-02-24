@@ -27,11 +27,12 @@
   "notas": {
     "tipo_sitio": "Blog estático con HTML puro",
     "notas_publicadas": [
+      "el-sistema-del-1-porciento.html",
       "se-hace-camino-al-andar.html",
       "las-oficinas-vacias-y-el-bambu.html",
       "no-todos-los-dias-tienen-que-salir-bien.html"
     ],
-    "estructura": "public/ contiene el sitio, index.html es la home"
+    "estructura": "public/ contiene el sitio, index.html es landing page Planea, notas en archivos individuales"
   },
   "credentials": {
     "note": "NUNCA hardcodear valores. Siempre referenciar al archivo .env",
