@@ -1,0 +1,45 @@
+{
+  "proyecto": "ideasreales",
+  "repo": {
+    "url": "git@github.com:miyyyyo/ideasreales.git",
+    "mainBranch": "main",
+    "localPath": "/Users/marcelo/Documents/ideasreales/ideasreales",
+    "deploysOnPush": false
+  },
+  "stack": {
+    "frontend": "HTML/CSS estático",
+    "backend": "ninguno (sitio estático)",
+    "database": "ninguno",
+    "hosting": "Vercel"
+  },
+  "local": {
+    "url": "http://127.0.0.1:3000",
+    "runCommand": "npx serve public",
+    "notes": "Sitio estático. Servir la carpeta public/"
+  },
+  "produccion": {
+    "url": "https://ideasreales.com",
+    "admin_url": "https://vercel.com/doxadoctor",
+    "vercel_project_id": "prj_2PExGPRrBQ6znFZiPAIOXo8LeGHj",
+    "vercel_org_id": "team_YaypsomIvdY6sBBb1MZEcqhn",
+    "dominios": ["ideasreales.com", "www.ideasreales.com"]
+  },
+  "notas": {
+    "tipo_sitio": "Blog estático con HTML puro",
+    "notas_publicadas": [
+      "se-hace-camino-al-andar.html",
+      "las-oficinas-vacias-y-el-bambu.html",
+      "no-todos-los-dias-tienen-que-salir-bien.html"
+    ],
+    "estructura": "public/ contiene el sitio, index.html es la home"
+  },
+  "credentials": {
+    "note": "NUNCA hardcodear valores. Siempre referenciar al archivo .env",
+    "envFiles": {}
+  },
+  "errores_conocidos": {},
+  "reglas": {
+    "probar_local_primero": "SIEMPRE probar en servidor local antes de pushear",
+    "url_local": "Usar 127.0.0.1 (NO localhost)"
+  }
+}
